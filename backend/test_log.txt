@@ -1,0 +1,36 @@
+==================================================
+ SOCPlatform: CSV Ingestion & AI Testing Script
+==================================================
+[*] AI Model: llama-3.3-70b-versatile
+[*] API Key config: Configured
+[*] Loading dataset: ../Untitled-Discover-session.csv
+[*] Successfully parsed 50 events from CSV.
+
+[*] Initializing Rule Engine...
+[*] Running batch through Detection Rules...
+[+] Rule Engine generated 0 alerts.
+
+[*] No explicit rule matches. Forcing AI pipeline test on raw events...
+
+==================================================
+ STARTING AI AGENT THREAT ANALYSIS (GROQ)
+==================================================
+[*] Dispatching events to LangGraph AI Agent Pipeline...
+
+==================================================
+ AI THREAT ANALYSIS RESULTS
+==================================================
+[*] Attack Type       : Privilege Escalation
+[*] Severity          : HIGH
+[*] Threat Score      : 85/100
+[*] Confidence        : 90%
+[*] MITRE Techniques  : T1078
+[*] Recommended Actions:
+    - Investigate and verify the legitimacy of the SYSTEM account activity
+    - Review and monitor Credential Manager credential reads for suspicious patterns
+    - Consider implementing additional security controls to restrict privilege assignments and credential access
+
+[*] Explanation:
+A series of suspicious events occurred on host DC1, indicating a potential automated attempt to escalate privileges. Multiple special privilege assignments to the SYSTEM account and repeated Credential Manager credential reads were detected within a short time frame. This activity suggests a possible privilege escalation attack, which could allow an attacker to gain elevated access to sensitive resources. The attack chain indicates an initial access phase followed by privilege escalation, increasing the risk of further malicious activity.
+
+[+] Full AI analysis results saved to backend/test_results.json

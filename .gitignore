@@ -1,0 +1,17 @@
+# Environment variables
+.env
+*.env
+
+# Python
+venv/
+backend/venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+# logs and test outputs
+backend/backend.log
+backend/test_log.txt
+backend/test_results.json
+*.log
